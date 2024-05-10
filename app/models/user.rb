@@ -7,4 +7,5 @@ class User < ApplicationRecord
          validates :profile, presence: true
          validates :occuption, presence: true
          validates :position, presence: true
+         has_many :prototypes
   end
