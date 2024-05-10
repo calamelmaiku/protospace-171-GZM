@@ -1,5 +1,7 @@
 class PrototypesController < ApplicationController
-  def index
+  def show
+    @prototype = Prototype.find(params[:id])
+    render :show, locals: { prototype: @prototype }
   end
   
   def new
