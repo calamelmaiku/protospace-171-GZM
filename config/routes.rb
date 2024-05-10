@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :users, only: [:show]
-  resources :prototypes, only: [:show]
+  resources :prototypes, only: [:show, :index]
 end
 
