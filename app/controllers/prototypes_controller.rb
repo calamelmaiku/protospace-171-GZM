@@ -5,7 +5,9 @@ class PrototypesController < ApplicationController
 
   def show
     @prototype = Prototype.find(params[:id])
-    render :show, locals: { prototype: @prototype }
+    @comment = Comment.new
+    @comments = @prototype.comments.includes(:user)
+    render :show, locals: { prototype: @prototype, comment: @comment }
   end
 
   def new
