@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :prototypes
-  has_meny :comments
+  has_many :comments
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
